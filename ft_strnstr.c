@@ -10,7 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+//#include "libft.h"
+
+#include <string.h>
+#include <unistd.h>
+#include <stdio.h>
 
 char	*ft_strnstr(const char *h, const char *n, size_t len)
 {
@@ -25,7 +29,7 @@ char	*ft_strnstr(const char *h, const char *n, size_t len)
 		j = 0;
 		while (h[i + j] == n[j] && (i + j) < len)
 		{
-			if (n[i + 1] == '\0')
+			if (n[j + 1] == '\0')
 				return ((char *)h + i);
 			j++;
 		}
@@ -33,3 +37,12 @@ char	*ft_strnstr(const char *h, const char *n, size_t len)
 	}
 	return (0);
 }
+
+/*
+int main()
+{
+	char *res1 = ft_strnstr("holaquetal", "que", 8);
+	char *res2 = strnstr("holaquetal", "que", 8);
+	printf("RES1:|%s|\nRES2:|%s|\n", res1, res2);
+	return (0);
+}*/
