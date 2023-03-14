@@ -91,4 +91,3 @@ char	**ft_split(char const *s, char c)
 	tab = ft_fill_tab(s, c, tab);
 	return (tab);
 }
-
